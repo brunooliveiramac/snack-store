@@ -19,6 +19,12 @@ public class Ingredient {
     public Ingredient() {
     }
 
+    public Ingredient(String id, String name, double value) {
+        this.id = id;
+        this.name = name;
+        this.value = value;
+    }
+
     public String getId() {
         return id;
     }
