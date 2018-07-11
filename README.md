@@ -5,7 +5,8 @@ Pequena app utilizando as ferrametnas descritas :)
 Pontos importantes:
   - No back ned foi utilizado <b>domain driven desing</b>, separado ao máximo possivel o domínio d aplicação de detalhes de 
   implementação como frameworks e banco por exemplo. A aplicação tem apenas um agragado. Essa separação é importante, pois 
-  delimita o limite do business e assim podemos definir os microserviços futuramente :)
+  delimita o limite do business e assim podemos definir os microserviços futuramente :). 
+  - Em todas os componentes no back-end há um arquivo read.me explicando o motivo de sua ciração.
   - Para a execução é apenas necessario ter instalado <b>docker comunity e compose</b> em sua máquina. Para a execução execute
   o comando <b>docker-compose up</b> dentro de <b>monolitic-application</b>.
         Assim que executar o comando serão criados containers do banco, nginx para execução do proxy reverso na porta 80 e 
@@ -22,10 +23,10 @@ Pontos importantes:
   - Há também testes unitarios, integrados e end-to-end que também são executados no warmup da aplicação e que podem ser executados pelo comando:
           Dentro de monolitic-application/snacks:
             - mvn test
-  - Os testes seguem o padrão sugerido por Mike Cohn, uma <b>pirâmide</b> onde a base é cmoposta por testes unitários de facil manutenção 
+  - Os testes seguem o padrão sugerido por Mike Cohn, uma <b>pirâmide</b> onde a base é composta por testes unitários de facil manutenção 
      e seguindo até o topo com testes integrados e end-to-end, mais caros e maior tempo de manutenção. Mais sobre:
      
-     <a href="https://broliveira.cloud/2018/05/08/hands-on-test-pyramid-and-solid/">BROLIVEIRA!</a>     
+     <a href="https://broliveira.cloud/2018/05/08/hands-on-test-pyramid-and-solid/">BROLIVEIRA!</a> :D
        
   - Até o momento você tambem pode acessar a aplicação remotamente:
           <a href="http://ec2-18-206-67-116.compute-1.amazonaws.com/index.html">IFOME!</a>     
