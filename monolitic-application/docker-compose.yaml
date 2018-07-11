@@ -1,0 +1,37 @@
+version: '3'
+services:
+  nginx:
+   container_name: startup-nginx
+   image: nginx:1.13
+   restart: always
+   ports:
+   - 80:80
+   - 443:443
+   volumes:
+   - ./nginx/conf.d:/etc/nginx/conf.d
+
+  mssql:
+    build: ./mssqldocker
+    image: mcmoe/mssqldocker
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: startup@123
+      MSSQL_DB: startup
+      MSSQL_USER: sa
+      MSSQL_PASSWORD: startup@123
+    ports:
+      - "1433:1433"
+    container_name: mssqlstartup
+
+  app:
+    build: ./snacks
+    working_dir: /snacks
+    volumes:
+      - ./snacks:/snacks
+      - ~/.m2:/root/.m2
+    expose:
+      - "8080"
+    command: mvn clean spring-boot:run
+    depends_on: 
+      - nginx
+      - mssql

@@ -1,0 +1,18 @@
+
+Our aggregates are like our bounded context. To identifier a bounded context in hard, we should work
+hard with the domain experts to properly separate our code base.
+
+I have identified that our snack is our RootEntity and all the other are aggregates, they are part of snack
+and they do not exists without a snack.
+
+Like uncle Bob said:
+
+"Gather together those things that change at the same times and for the same reasons.
+Separate those things that change at different times or for different reasons."
+
+We can start think to work with microservice from this point. Because a change in one aggregate should not
+require change in another. We can work with different team in the same project but with different aggregates
+without any problem.
+
+For while, we only have only aggregate, if we have more than one aggregate we would use
+events or queues to communicate between them.

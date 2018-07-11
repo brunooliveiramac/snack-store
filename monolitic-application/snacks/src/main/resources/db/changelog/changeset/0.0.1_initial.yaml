@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: initial_structure
+      author: Bruno
+      changes:
+        - sqlFile:
+            dbms: mssql
+            encoding: utf8
+            endDelimiter: \nGO
+            path: ../data/domain/0.0.1_initial_structure.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+
+  - changeSet:
+      id: initial_dump
+      author: Bruno
+      changes:
+        - sqlFile:
+            dbms: mssql
+            encoding: utf8
+            endDelimiter: \nGO
+            path: ../data/domain/0.0.2_initial_dump.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false

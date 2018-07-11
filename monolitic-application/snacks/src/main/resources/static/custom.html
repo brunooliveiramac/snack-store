@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snacks</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+
+</head>
+
+<body>
+
+<header class="header">
+	<a class="header-logo" href="#">
+		<h1>IFOME</h1>
+	</a>
+	<nav class="header-menu">
+		<ul>
+            <li>
+				<img class="cart-image" src="img/chef_3.ico" alt="">
+				<label class="cart-quantity"></label>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<main class="main-container">
+
+	<nav class="side-nav">
+		<ul>
+			<li><a class="nav-snacks" href="index.html">Snacks</a></li>
+			<li><a class="nav-ingredients" href="ingredients.html">Ingredients</a></li>
+		</ul>
+	</nav>
+	<section class="products">
+		<header>
+			<h1>Create your own</h1>
+			<div class="center">
+				<img src="img/spinner.gif" alt="Spinner" id="spinner" style="position: absolute">
+				<p id="erro" style="position: absolute">Ocorreu um erro, por favor tente novamente</p>
+				<p id="msg" style="position: absolute; margin-left: 10px"></p>
+			</div>
+		</header>
+
+		<div class="select-ingredients">
+			<select id="ingredients">
+
+			</select>
+			<input type="number" placeholder="Quantity" class="ingredient-quantity">
+			<a class="custom-button small" id="add-ingredient">Add</a>
+
+		</div>
+
+		<section class="selected-ingredients">
+			<h3>Selected Ingredients:</h3>
+			<div style="overflow-x:auto;">
+				<table id="ingredients-table">
+					<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Quantity</th>
+						<th>Options</th>
+					</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<a class="custom-button" style="padding: 10px; margin-top: 20px" id="calculate-offer">Calculate Offer</a>
+
+		<div id="box">
+            <label id="total"></label>
+		</div>
+
+	</section>
+</main>
+
+
+<footer class="footer">
+	<p>© Copyright - Bruno de Oliveira Macedo </p>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages{
+    stage('Unit Tests'){
+      steps {
+
+	}
+    }
+    stage('Preparing Environment'){
+      steps {
+
+	}
+    } 
+    stage('Deploy'){
+      steps {
+
+	}
+    }
+  }
+}
